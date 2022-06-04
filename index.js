@@ -11,10 +11,10 @@ const dates = [
 const createDate = (dates, position) => {
   let output = [];
   for (let i = 0; i < dates.length; i++) {
-    output.push(Math.round((Date.parse(dates[i])) / 1000));
+    output.push((Math.round((Date.parse(dates[i])) / 1000)).toString());
   }
   if (position !== undefined) {
-    return output.toString();
+    return output[position];
   } else {
     return output.sort().join('-');
   }
